@@ -1,0 +1,50 @@
+<!-- HTML for DEATH VALLEY GERMANS PROJECT - NICHOLAS ROLSTAD -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Tale of the Death Valley Germans</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+	<script src='js/route.js'></script>
+	<script src='js/story.js'></script>
+	<script src='js/story-points.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+	<link rel="stylesheet" href="css/style.css" />
+	
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style>       
+</head>
+	
+<body>
+	<!-- main grid container structure -->
+	<div class="portrait"><div class="warningtext">THIS MAP IS BEST VIEWED IN LANDSCAPE MODE! <br> PLEASE ROTATE YOUR DEVICE</div></div>
+	<div class="info">
+		<!-- title div -->
+		<div class="title">&nbsp<span class="kerned">THE TALE OF THE<br></span>DEATH VALLEY GERMANS</div>
+		<div class="story"></div>
+		<div class="controls">
+			<button id="reverse"><img class="controlimg" src="img/reverse.png"></button>
+			<button id="forward"><img class="controlimg" src="img/forward.png"></button> 
+		</div>
+
+	</div>
+	<!-- MAP div -->
+	<div class="mapSide">
+		<div id="map">
+			<!-- sequence control div is created dynamically in map.js -->
+			<script type="text/javascript" src="js/map.js"></script>
+		</div>	
+	</div>
+
+	<!-- non-active div only needed for jquery function -->
+	<div id="mobile-indicator"></div>
+</body>
+	
+</html>
+

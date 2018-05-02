@@ -1,0 +1,300 @@
+/*-- STYLESHEET FOR MEDIAN 3BR RENT PROJECT - NICHOLAS ROLSTAD --*/
+
+/*-- general styles for entire page --*/
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+button:focus {outline:0;}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: block;
+	background-color:#222;
+	background-image: url(subtle-grunge-texture-8.jpg);
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+/*-- styles for containers --*/
+#map {
+	height: 100%;
+	float:right;
+	width: 70%;
+	border-radius: 7px;
+}
+
+.mapSide {
+	height: 100%;
+	width: 100%;
+	padding: 10px 10px 10px 5px;
+}
+
+/*-- this is the style for the div that control the portriat-mode warning --*/
+.portrait {
+	height: 0px;
+	width: 0px;
+	color: transparent;
+}
+
+.info {
+	width: 30%;
+	height: 100%;
+	float:left;
+	margin: 0;
+}
+
+/*-- styles for title block--*/
+.title {
+	background-color: #d8d7d4;
+	opacity: .9;
+	color: #3f1d17;
+	font-size: 36px;
+	font-family: 'Abril Fatface', serif;
+	text-align: center;
+	padding-top: 0px;
+	line-height: 100%;
+	height: 90px;
+	margin: 10px;
+	border-radius: 7px;
+}
+
+.kerned {
+	font-size: 24px; 
+	letter-spacing: 12px;
+}
+
+/*-- styles for story block--*/
+.story {
+	background-color: #d8d7d4;
+	opacity: .8;
+	color: #3f1d17;
+	font-size: 18px;
+	font-family: 'Barlow', serif;
+	padding: 20px;
+	line-height: 100%;
+	height: 60%;
+	margin: 10px;
+	border-radius: 7px;
+	overflow: scroll;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.header {
+	font-size: 24px;
+	font-family: 'Barlow', serif;
+	font-weight: 700;
+}
+
+/*-- style custom leaflet popups --*/
+.leaflet-popup-content-wrapper {
+	width: 340px;
+	padding: 10px;
+	text-align: center;
+	background-color: #333;
+	opacity: 1;
+	border-radius: 7px;
+	text-align: left;
+}
+
+.popup-text {
+	color: #d8d7d4; 
+}
+
+.leaflet-popup-tip {
+	border-top: 10px solid #333;
+}
+
+.leaflet-popup-close-button {
+	opacity: 0;
+}
+
+.popup-img{
+	border-radius: 5px;
+}
+
+.leaflet-control-scale-line {
+	font-family: 'Barlow';
+	font-weight: 600;
+	color: #d8d7d4;
+	background-color: #555;
+	opacity: 1;
+	margin:5px;
+	border:none;
+	border-radius: 7px;
+}
+
+
+/*-- styles for controls --*/
+.controls{
+	height: 20%
+}
+
+.controlimg{
+	margin: 0px;
+}
+
+button {
+	background: #d8d7d4;
+	outline: medium none;
+	border: medium none;
+	opacity: .7;
+	color: #3f1d17;
+	font-size: 18px;
+	font-family: 'Barlow', serif;
+	line-height: 100%;
+	width: 120px;
+	height: 60%;
+	border-radius: 7px;
+	z-index: 10;
+	cursor: pointer;
+	margin: 0px 10px 10px 10px;
+}
+
+#reverse {
+	position: relative;
+	float: left;
+}
+
+#forward {
+	position: relative;
+	float: right;
+}
+
+button:hover {
+	opacity: 1;
+}
+
+
+/*-- MEDIA QUERIES --*/
+
+/*-- makes protrait-mode warning visible when appropriate --*/
+@media screen and (orientation:portrait){
+	.portrait {
+		height: 100%;
+		width: 100%;
+		background-color: #333;	
+		text-align: center;
+	}
+	.warningtext {
+		color: white;
+		font-family: 'Barlow', serif;
+		font-size:18px;
+		position: relative;
+		float: left;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media only screen and (max-width: 1580px) {
+	.title {
+		font-size: 32px;
+		height: 80px;
+	}
+}
+
+@media only screen and (max-width: 1380px) {
+	.title {
+		font-size: 24px;
+		height: 60px;
+	}
+	.kerned {
+		font-size: 16px; 
+		letter-spacing: 12px;
+	}
+	.story {
+		font-size: 16px;
+		padding: 10px;
+		line-height: 110%;
+	}
+
+	.header {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	.title {
+		font-size: 18px;
+		height: 45px;
+	}
+	.kerned {
+		font-size: 14px; 
+		letter-spacing: 6px;
+	}
+	.story {
+		font-size: 14px;
+		padding: 10px;
+		line-height: 110%;
+	}
+
+	.header {
+		font-size: 14px;
+	}
+	button {
+		width: 100px;
+		height: 60%;
+	}
+	
+}
+
+@media only screen and (max-width: 850px) {
+	.title {
+		font-size: 14px;
+		height: 33px;
+	}
+	.kerned {
+		font-size: 10px; 
+		letter-spacing: 2px;
+	}
+	button {
+		width: 65px;
+		height: 60%;
+	}
+}
+
+@media only screen and (max-height: 590px) {
+	.title {
+		font-size: 14px;
+		height: 33px;
+	}
+	.kerned {
+		font-size: 10px; 
+		letter-spacing: 2px;
+	}
+	.story {
+		font-size: 13px;
+		padding: 10px;
+		line-height: 110%;
+	}
+
+	.header {
+		font-size: 13px;
+	}
+	.controlimg{
+		height: 50%
+	}
+	.leaflet-popup-content-wrapper {
+		width: 200px;
+	}
+	.popup-img{
+		display: block;
+		max-width:160px;
+		width: auto;
+		height: auto;
+		margin-bottom: -15px;
+	}
+	.leaflet-control-scale-line {
+		opacity: 0;
+	}
+
+}
+
